@@ -1,25 +1,31 @@
-window.onload = function() {
-    const speed = 1;
-    const stage = document.querySelector("#stage");
-    const ctx = stage.getContext("2d");
+// function snake
+// function apple
+// function counter 
+// function snakeGame
 
-    let speedX = 0; 
-    let speedY = 0;
+window.onload = function () {
+    const speed = 1
+    const stage = document.querySelector("#stage")
+    const ctx = stage.getContext("2d")
 
-    let pointX = 10;
-    let pointY = 15;
+    let speedX = 0 
+    let speedY = 0
+
+    let pointX = 10
+    let pointY = 15
     
-    let lengthOfPiece = 20;
-    let quantitieOfPieces = 20;
+    let lengthOfPiece = 20
+    let quantitieOfPieces = 20
     
-    let appleX = 15;
-    let appleY = 15;
+    let appleX = 15
+    let appleY = 15
 
-    let trail = [];
-    let tail = 5;
+    let trail = []
+    let tail = 5
 
+    let contador = 0
 
-    setInterval(game, 80);            
+    setInterval(game, 80)            
     
     function game() {
         document.addEventListener("keydown", keyPush)
@@ -53,7 +59,7 @@ window.onload = function() {
 
         trail.push({ x: pointX, y: pointY })
         while (trail.length > tail) {
-            trail.shift();
+            trail.shift()
         }
 
         if (appleX == pointX && appleY == pointY) {
@@ -86,3 +92,7 @@ window.onload = function() {
         }
     }
 }
+
+
+
+
